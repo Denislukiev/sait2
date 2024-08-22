@@ -1,0 +1,67 @@
+/* Общие стили для кнопок */
+.menu-button {
+  display: inline-block; /* Кнопки отображаются как строчные элементы */
+  padding: 5px 10px; /* Внутренние отступы кнопок */
+  background-color: #007bff; /* Цвет фона кнопок */
+  color: #fff; /* Цвет текста на кнопках */
+  text-decoration: none; /* Убирает подчеркивание ссылок */
+  border-radius: 20px; /* Скругление углов кнопок */
+  margin-right: 5px; /* Горизонтальный отступ между кнопками */
+  margin-bottom: 5px; /* Вертикальный отступ между кнопками */
+}
+
+/* Стили кнопок при наведении мыши */
+.button:hover {
+  background-color: #0056b3; /* Изменение цвета фона при наведении */
+}
+
+/* Стили для desktop-версии */
+@media (min-width: 751px) {
+  body {
+  background-image: url('osn_pc.png');
+  background-size: cover;
+  background-position: center;
+}
+  /* Контейнер для кнопок */
+  .buttons-container {
+    display: flex; /* Отображение кнопок в виде гибкого контейнера */
+    flex-direction: row; /* Расположение кнопок в горизонтальном ряду */
+    justify-content: center; /* Центрирование кнопок по горизонтали */
+    align-items: center; /* Центрирование кнопок по вертикали */
+    
+  }
+
+  /* Стили для первой и второй кнопок */
+  .button:nth-child(1),
+  .button:nth-child(2) {
+    margin-right: 20px; /* Дополнительный горизонтальный отступ между первыми двумя кнопками */
+  }
+
+  /* Стили для третьей кнопки */
+  .button:nth-child(3) {
+    margin-top: 20px; /* Вертикальный отступ между первыми двумя и третьей кнопками */
+  }
+}
+
+/* Стили для mobile-версии */
+@media (max-width: 750px) {
+  body {
+    background-image: url('osn_mob.png');
+    background-size: cover;
+    background-position: center;
+    
+  }
+  /* Контейнер для кнопок */
+  .buttons-container {
+    display: flex; /* Отображение кнопок в виде гибкого контейнера */
+    flex-direction: column; /* Расположение кнопок в вертикальной колонке */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    margin-top: 70px; /* Увеличьте значение, чтобы кнопки расположились ниже */
+  }
+
+  /* Стили для отдельных кнопок */
+  .menu-button {
+    width: 100%; /* Каждая кнопка занимает всю ширину контейнера */
+    margin-right: 0; /* Убирает горизонтальный отступ между кнопками */
+  }
+}
